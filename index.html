@@ -259,28 +259,36 @@
             </div>
           </div>
 
-          <div class="col-lg-5 col-md-12" data-aos="fade-up" data-aos-delay="300">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-              <div class="form-group">
-                <input type="text" name="name" class="form-control" id="name" placeholder="Votre Nom complet" required>
-              </div>
-              <div class="form-group">
-                <input type="email" class="form-control" name="email" id="email" placeholder="Votre Email" required>
-              </div>
-              <div class="form-group">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Titre" required>
-              </div>
-              <div class="form-group">
-                <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
-              </div>
-              <div class="my-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
-              </div>
-              <div class="text-center"><button type="submit">Envoyer</button></div>
-            </form>
-          </div>
+        <div class="col-lg-5 col-md-12" data-aos="fade-up" data-aos-delay="300">
+    <form id="contactForm" role="form" class="php-email-form">
+        <div class="form-group">
+            <input type="text" name="name" class="form-control" id="name" placeholder="Votre Nom complet" required>
+        </div>
+        <div class="form-group">
+            <input type="email" class="form-control" name="email" id="email" placeholder="Votre Email" required>
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" name="subject" id="subject" placeholder="Titre" required>
+        </div>
+        <div class="form-group">
+            <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+        </div>
+        <div class="my-3">
+            <div class="loading">Loading</div>
+            <div class="error-message"></div>
+            <div class="sent-message">Message envoyé!</div>
+        </div>
+        <div class="text-center"><button type="submit">Envoyer</button></div>
+    </form>
+</div>
+
+<script>
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+        event.preventDefault(); 
+        this.reset(); 
+        
+    });
+</script>
 
         </div>
 
